@@ -127,4 +127,46 @@ console.log("freeCodeCamp".indexOf("F")) // -1
 // prompt("What is your name?", "Guest");
 
 
+// Brief history about ASCII
+// ASCII, short for American Standard Code for Information Interchange, 
+// is a character encoding standard used in computers to represent text. It assigns a numeric value to each character, which is universally recognized by machines.
+
+// ASCII is a system for encoding characters such as letters, digits, and symbols into numerical values.
+
+// The ASCII standard covers 128 characters including:
+
+// Uppercase and lowercase English letters (A-Z, a-z).
+// Numbers (0-9).
+// Common punctuation marks and symbols (!, @, #, and so on).
+// Control characters (such as newline and tab).
+
+
+// In JavaScript, you can easily access the ASCII code of a character using the charCodeAt() method. 
+// This method is called on a string and returns the ASCII code of the character at a specified index.
+
+let letter = "A";
+console.log(letter.charCodeAt());  // 65
+
+
+letter = "J";
+console.log(letter.charCodeAt());
+
+// While charCodeAt() helps you retrieve the ASCII value of a character, the fromCharCode() method allows you to do the opposite: 
+// convert an ASCII code into its corresponding character.
+
+let char = String.fromCharCode(65);
+console.log(char);  //  A
+
+char = String.fromCharCode(78);
+console.log(char);
+
+
+char = String.fromCharCode(53);
+console.log(char);
+
+
+char = String.fromCharCode(88);
+console.log(char);
+
+console.log(String.fromCharCode(66));
 
