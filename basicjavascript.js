@@ -13,7 +13,6 @@ console.log(factorial(8));
 
 
 
-
 // Escape Character
 // \n means new line
 // \t means new tab
@@ -94,6 +93,10 @@ console.log("Pearl" == "Amethyst");
 // NaN is the only JS value that is not equal to itself
 console.log(NaN == NaN)
 // False
+
+
+// Logical Operators
+
 
 
 
