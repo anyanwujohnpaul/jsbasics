@@ -36,24 +36,26 @@ console.log(statement); // She said, "Hello!"
 
 // Template Literals and String Interpolation
 
-name = "Johnpaul";
-greeting = `Hello, ${name}!`;
+let my_name = "Johnpaul";
+let greetingText = `Hello, ${my_name}!`;
 
 console.log(greeting);
 
 
 // Using String Concatenation and + operator
-name = "Chinedu";
-age = 25;
-message = "My name is " + name + " and I am " + age + " years old.";
-console.log(message);
+let hisName = "Chinedu";
+let hisAge = 25;
+let simple_message = "My name is " + hisName + " and I am " + hisAge + " years old.";
+console.log(simple_message);
 
 // Using Template Literals and String Interpolation
 
-name = "Mubarak";
-age = 25;
-message = `My name is ${name} and I am ${age} years old.`;
-console.log(message);
+let friend_name = "Mubarak";
+let friend_age = 25;
+let friend_message = `My name is ${friend_name} and I am ${friend_age} years old.`;
+console.log(friend_message);
+
+
 
 // Template Literals supports Multiline string
 
@@ -90,9 +92,9 @@ let phrase = "I am going to be a top 1% software Engineer in the world";
 let phrasePosition = phrase.indexOf("going");
 console.log(phrasePosition);
 
-let love_letter = "I love love";
-let loveletter_position = love_letter.indexOf("ove");
-console.log(loveletter_position);
+let loveLetter = "I love love";
+let loveTextPosition = loveLetter.indexOf("ove");
+console.log(loveTextPosition);
 
 
 // Substring is not found here
@@ -111,9 +113,9 @@ console.log(position); // 27
 
 // Exercise
 
-love_letter = "I love love";
-loveletter_position = love_letter.indexOf("love", 5);
-console.log(loveletter_position);
+let love_text = "I love love";
+let love_text_position = love_text.indexOf("love", 5);
+console.log(love_text_position);
 
 
 // Short way of finding substring in a string and printing it in the console
@@ -169,4 +171,206 @@ char = String.fromCharCode(88);
 console.log(char);
 
 console.log(String.fromCharCode(66));
+
+
+
+// Date: 30-10-2025
+// Working with Strings and Slice Operator
+
+// Testing if a string contains a substring
+
+// The includes() method is used to check if a string contains a specific substring. 
+// If the substring is found within the string, the method returns true otherwise, it returns false.
+
+
+// Format for using the includes() method
+// string.includes(searchValue);
+
+// Note: The searchValue represents the substring you're checking for in the main string
+
+// Example of using the includes() method
+
+let phrase_text = "JavaScript is awesome!";
+let phrase_result = phrase_text.includes("awesome");
+
+console.log(phrase_result);  // true
+
+// Note: The includes() method is case sensitive
+
+
+
+// Exercises for myself on includes() and slice() method
+
+// Check if the code below contains the word "fun"
+
+let expression = "Learning JavaScript is fun";
+
+let resultOne = expression.includes("fun");
+console.log(resultOne);
+
+
+// Case sensitivity check 
+let resultTwo = expression.includes("Fun");
+console.log(resultTwo);
+
+
+// includes() - Email Domain checker; Check if the string contains "@" and ".com"
+
+let email = "user@example.com";
+
+let emailResultOne = email.includes("@");
+console.log(emailResultOne)
+
+let emailResultTwo = email.includes(".com");
+console.log(emailResultTwo);
+
+
+// includes() - We want to check if a given word exists inside text — but the check must be case-insensitive.
+
+function containsWord(text, word) {
+
+  // return true or false
+  let upperCaseText = text.toUpperCase();
+  let upperCaseWord = word.toUpperCase();
+
+  let containsWordResult = upperCaseText.includes(upperCaseWord);
+
+  console.log(containsWordResult);
+}
+
+containsWord("Everyday", "day");
+
+// includes() - Check if "Chika" is included inside the string using .includes().
+
+const names = "Ada, Ben, Chika, David";
+
+let names_result = names.includes("Chika");
+
+console.log(names_result);
+
+
+// incudes() and slice() Check if "password" appears — if yes, slice out only "swordfish" and log it.
+let secret = "The password is: swordfish";
+
+let passwordAppears = secret.includes("password");
+
+if (passwordAppears) {
+  let sliceSwordfish = secret.slice(17);
+  console.log(sliceSwordfish);
+}
+
+// Slicing - Find username from email
+let email_text = "developer@techhub.io";
+
+let email_result = email_text.slice(0, 9);
+console.log(email_result);
+
+// Remove first word
+// Use .slice() to remove "Hello " and just return "World, Welcome".
+const msg = "Hello World, Welcome";
+
+let slice_result = msg.slice(5);
+console.log(slice_result);
+
+
+// Conditional Greeting
+// If it includes "guest", log "Welcome Guest!"
+// Else log "Welcome Back!"
+
+let user = "guest_user";
+
+let user_result = user.includes("guest");
+
+if (user_result) {
+    console.log("Welcome Guest");
+} else {
+  console.log("Welcome Back!");
+}
+
+// Extract Domain Extension
+// Slice the last 3 characters ("org") without using .length.
+
+let url = "https://freecodecamp.org";
+
+let url_result = url.slice(-3);
+
+console.log(url_result);
+
+
+
+// CORRECTIONS
+// Note: Declaring variables without declaration makes it global and can cause bugs.
+
+
+// Avoid Magic Number
+let secret_word = "The password is: swordfish";
+let index = secret_word.indexOf("swordfish");
+
+if (index !== -1) {
+  console.log(secret.slice(index)); // safer
+}
+
+
+// includes() method continued
+
+let texting = "Hello, JavaScript world!";
+let text_result = texting.includes("JavaScript", 7);
+
+console.log(text_result);  // true
+
+
+// slice() Method
+// The slice() method allows you to extract a portion of a string and returns a new string, without modifying the original string. 
+// It takes two parameters: the starting index and the optional ending index.
+
+// Basic Syntax
+// string.slice(startIndex, endIndex);
+
+// Note: startIndex is the position where the extraction starts. 
+// endIndex is where the extraction ends. If not provided, slice() extracts until the end of the string.
+
+// Example on slice() method
+let code_message = "Hello, world!";
+let code_greeting = code_message.slice(0, 5);
+
+console.log(code_greeting);  // Hello
+
+// In this example, slice(0, 5) extracts characters starting from index 0 up to but not including index 5. 
+// As a result, the word Hello is extracted.
+// If you omit the second parameter, slice() will extract everything from the start index to the end of the string:
+
+
+let message = "Hello, world!";
+let world = message.slice(7);
+
+console.log(world);  // world!
+
+
+// You can also use negative numbers as indexes. When you use a negative number, it counts backward from the end of the string:
+
+let java_message = "JavaScript is fun!";
+let lastWord = message.slice(-4);
+
+console.log(lastWord);  // fun!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
