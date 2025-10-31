@@ -354,6 +354,108 @@ let lastWord = message.slice(-4);
 console.log(lastWord);  // fun!
 
 
+// Changing the Case for a string
+
+// toUpperCase() 
+let simple_greeting = "Hello, World!";
+let uppercaseGreeting = greeting.toUpperCase();
+console.log(uppercaseGreeting);  // Output: "HELLO, WORLD!"
+
+
+
+// toLowerCase()
+
+let shout = "I AM LEARNING JAVASCRIPT!";
+let lowercaseShout = shout.toLowerCase();
+console.log(lowercaseShout);  // Output: "i am learning javascript!"
+
+
+// Trimming whitespaces from a string
+// Whitespace refers to spaces, tabs, or line breaks that occur in a string but are not visible characters. 
+
+// The trim() method is the most commonly used way to remove whitespace from both the beginning and the end of a string.
+
+let trimMessage = "   Hello!   ";
+let trimmedMessage = message.trim();
+console.log(trimmedMessage);  // Output: "Hello!"
+
+// The trimStart() removes whitespace from the beginning or start of a string
+
+let trimGreeting1 = "   Hello!   ";
+let trimmedStart = greeting.trimStart();
+
+console.log(trimmedStart);  // Output: "Hello!   "
+
+// The trimEnd() removes whitespace from the end of a string
+
+let trimGreeting2 = "   Hello!   ";
+let trimmedEnd = greeting.trimEnd();
+
+console.log(trimmedEnd);  // Output: "   Hello!"
+
+
+// Replacing Part of a string with another
+
+// The replace() method in JavaScript allows you to find a specified value (like a word or character) in a string and replace it with another value.
+
+//Synatx for replacing the part of a string with another: string.replace(searchValue, newValue);
+
+// searchValue is the value you want to search for in the string.
+
+// The newValue is the value that will replace the searchValue
+
+let text = "I love JavaScript!";
+let newText = text.replace("JavaScript", "coding");
+
+console.log(newText);  // Output: "I love coding!"
+
+// Note: By default, the replace() method will only replace the first occurrence of the searchValue. If the value appears multiple times in the string, only the first one will be replaced:
+
+let simplePhrase = "Hello, world! Welcome to the world of coding.";
+let updatedPhrase = phrase.replace("world", "universe");
+
+console.log(updatedPhrase);  // Output: "Hello, universe! Welcome to the world of coding."
+
+
+// Repeating a string x number of Times
+
+// The repeat() method is a built-in function in JavaScript that allows you to repeat a string a specified number of times.
+//  Here is the basic syntax: string.repeat(count);
+// string is the string that you want to repeat, and count is the number of times you want the string to be repeated. Here's an example:
+
+let word = "Hello!";
+let repeatedWord = word.repeat(3);
+console.log(repeatedWord);  // Output: "Hello!Hello!Hello!"
+
+// Note: The count parameter must be a non-negative number. If you pass a negative number, JavaScript will throw a RangeError.
+
+let wordTest = "Test";
+console.log(wordTest.repeat(-1));  // Throws RangeError: Invalid count value
+
+
+// Note: The count must be a finite number. If you try to repeat a string an infinite number of times or use Infinity as the count, you will also get a RangeError.
+
+// Infinity is a special value that represents an infinite quantity. It's used to denote numbers that are larger than any finite number.
+
+let wordTest2 = "Test";
+console.log(word.repeat(Infinity));  // Throws RangeError: Invalid count value
+
+// If the count is not an integer (such as a decimal like 2.5), the repeat() method will round it down to the nearest integer.
+
+let wordTest3 = "Test";
+console.log(wordTest3.repeat(2.5));  // Output: "TestTest"
+
+// If you pass 0 as the count, the repeat() method will return an empty string.
+
+let wordTest4 = "Test";
+console.log(wordTest4.repeat(0));  // Output: ""
+
+
+
+
+
+
+
 
 
 
