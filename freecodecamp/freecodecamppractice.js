@@ -354,6 +354,8 @@ let lastWord = message.slice(-4);
 console.log(lastWord);  // fun!
 
 
+
+// Date: 31st of October, 2025
 // Changing the Case for a string
 
 // toUpperCase() 
