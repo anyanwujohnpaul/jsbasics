@@ -450,7 +450,9 @@ console.log(wordTest3.repeat(2.5));  // Output: "TestTest"
 // If you pass 0 as the count, the repeat() method will return an empty string.
 
 let wordTest4 = "Test";
-console.log(wordTest4.repeat(0));  // Output: ""
+console.log(wordTest4.repeat(0));  // Output: "" - This returns an empty string
+
+
 
 
 
