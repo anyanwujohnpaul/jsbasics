@@ -17,7 +17,7 @@ following triangle:
 #######
 */
 
-let seventriangle = "########";
+let seventriangle = "#######";
 for (let triangle = "#"; triangle <= seventriangle; triangle += "#") {
     console.log(triangle);
 }
