@@ -453,6 +453,187 @@ let wordTest4 = "Test";
 console.log(wordTest4.repeat(0));  // Output: "" - This returns an empty string
 
 
+// Working with Numbers and Arithmetic Operators
+// Numbers
+// Checking Types
+
+const wholeNumber = 50;
+const decimalNumber = 4.5;
+const negativeNumber = -7;
+
+console.log(typeof wholeNumber); // number
+console.log(typeof decimalNumber); // number
+console.log(typeof negativeNumber); // number
+
+// Floats: Floating point numbers are numbers with decimal points. They're often referred to as just "floats"
+// Checking Types of floats
+const floatingPointNumber = 4.5;
+const anotherFloat = 89.56;
+const oneMoreFloat = 16.462;
+
+console.log(typeof floatingPointNumber); // number
+console.log(typeof anotherFloat); // number
+console.log(typeof oneMoreFloat); // number
+
+
+
+// Infinity
+
+const infiniteNumber = 1 / 0;
+console.log(infiniteNumber); // Infinity
+console.log(typeof infiniteNumber); // number
+
+/*
+Sometimes in JavaScript, some mathematical operations don't result in a valid number. 
+For instance, if you try to perform a mathematical operation on something that isn't a number, 
+you'll get NaN, which stands for "Not a Number":
+
+*/
+
+const notANumber = 'hello world' / 2;
+console.log(notANumber); // NaN
+console.log(typeof notANumber); //Number
+
+// Arithmetic Operations
+
+// Addition
+const num1 = 10;
+const num2 = 5;
+const num3 = 15;
+
+const result1 = num1 + num2;
+const result2 = num2 + num1;
+const result3 = num2 + num1 + num3;
+
+console.log(result1); // 15
+console.log(result2); // 15
+console.log(result3); // 30
+
+
+// Subtraction
+
+const difference = 10 - 5;
+console.log(difference); // 5
+
+
+// Multiplication
+
+const num_one = 10;
+const num_two = 5;
+const num_three = 15;
+
+const result_one = num1 * num2;
+const result_two = num2 * num1;
+const result_three = num2 * num1 * num3;
+
+console.log(result_one); // 50
+console.log(result_two); // 50
+console.log(result_three); // 750
+
+// Division
+
+const num__one = 10;
+const num__two = 5;
+const num__three = 15;
+
+const result__one = num1 / num2;
+const result__two = num2 / num1;
+const result__three = num2 / num1 / num3;
+
+console.log(result__one); // 2
+console.log(result__two); // 0.5
+console.log(result__three); // 0.0333333333333333
+
+// Remainder operator - Modulo - %
+
+const numone = 10;
+const numtwo = 3;
+const remainder = num1 % num2;
+
+console.log(remainder); // 1
+
+// Exponentiation operator - **
+
+const number1 = 2;
+const number2 = 3;
+
+const exponent = number1 ** number2;
+console.log(exponent); // 8
+
+
+// Mixing all Arithmetic Operators
+const result = 10 + 5 * 2 - 8 / 4;
+console.log(result); // 18
+
+
+// Calculations with Number and Strings
+
+/*
+When you use + with a number and a string, JavaScript decides to treat them both as strings and joins them together. 
+If you check the type of the result with the typeof operator, you'd see it's indeed a string:
+*/
+
+const result_random = 5 + '10';
+
+console.log(result_random); // 510
+console.log(typeof result_random); // string
+
+const result_random_one = '10' + 5;
+
+console.log(result_random_one); // 105
+console.log(typeof result_random_one); // string
+
+/*
+JavaScript sees a string in '10' and a number in 5, so it converts the number to a string and concatenates them. 
+This is known as type coercion. 
+Type coercion is when a value from one data type is converted into another.
+*/
+
+
+/*
+
+Things get more interesting when you try to perform other arithmetic operations like subtraction, multiplication, or division with a string and number. 
+In these cases, JavaScript tries to convert the string into a number before doing the math – another type coercion! 
+Here's what happens:
+
+*/
+
+const subtractionResult = '10' - 5;
+console.log(subtractionResult); // 5
+console.log(typeof subtractionResult); // number
+
+const multiplicationResult = '10' * 2;
+console.log(multiplicationResult); // 20
+console.log(typeof multiplicationResult); // number
+
+const divisionResult = '20' / 2;
+console.log(divisionResult); // 10
+console.log(typeof divisionResult); // number
+
+
+// How Operator Precedence Work
+
+// Operator precedence determines the order in which operations are evaluated in an expression. 
+// Operators with higher precedence are evaluated before those with lower precedence.
+
+const resultPrecedence = 2 + 3 * 4;
+
+console.log(resultPrecedence); // 14
+
+// Nullish coalescing operator
+// The nullish coalescing operator is more sophisticated than logical OR and logical AND. 
+// Represented by a double question mark (??), it helps in scenarios where you want to return a value only if the first one is null or undefined. 
+// Here is an example of working with the nullish coalescing operator:
+
+const resultNullish = null ?? 'default';
+
+console.log(resultNullish); // default
+
+
+
+
+
+
 
 
 
