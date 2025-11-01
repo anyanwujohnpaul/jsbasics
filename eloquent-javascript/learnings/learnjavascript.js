@@ -212,7 +212,7 @@ console.log(min);
 // A statement starting with the keyword while creates a loop. The word
 // while is followed by an expression in parentheses and then a statement,
 // much like if. The loop keeps entering that statement as long as the
-// expression produces a value that gives true when converted to Boolean. 
+// expression produces a value that gives true when converted to Boolean.
 
 let number = 0;
 while (number <= 12) {
@@ -234,7 +234,6 @@ console.log(result);
 // one point: a do loop always executes its body at least once, and it starts
 // testing whether it should stop only after that first execution.
 
-
 // Tell ChatGPT to explain this step by step
 // let yourName;
 // do {
@@ -242,14 +241,13 @@ console.log(result);
 // } while (!yourName);
 // console.log("Hello " + yourName);
 
-
 // For Loops
 
 for (let number = 0; number <= 12; number += 2) {
   console.log(number);
 }
 // This code create a for loop; which start by declaring and initialising a variable followed by a condition that needs to be true then
-// the variable will be increased by 2 only if the condition is true, the condition being that number (the declared variable) must be 
+// the variable will be increased by 2 only if the condition is true, the condition being that number (the declared variable) must be
 // less than or equal to 12
 
 // Exercise
@@ -258,35 +256,32 @@ for (let odd = 1; odd <= 20; odd += 2) {
   console.log(odd);
 }
 
-
 // Generating set of even number between 2 to 30
 for (let even = 2; even <= 30; even += 2) {
-  console.log(even)
+  console.log(even);
 }
 
 for (let oddNo = 1; oddNo <= 30; oddNo += 2) {
   console.log(oddNo);
 }
 
-
 // Using for Loop for to get the result of 2 raised to the power of 10
 // Tell ChatGPT to explain what this code does step by step
 let resultExponent = 1;
 for (let counter = 0; counter < 10; counter++) {
-resultExponent *= 2;
+  resultExponent *= 2;
 }
 console.log(resultExponent);
-
 
 // Breaking Out of a Loop
 // Having the looping condition produce false is not the only way a loop can finish. The break statement has the effect of immediately jumping out of the enclosing loop.
 
 // The code below; finds the first number that is both greater than or equal to 20 and divisible by 7:
 for (let current = 20; ; current = current + 1) {
-if (current % 7 == 0) {
-console.log(current);
-break;
-}
+  if (current % 7 == 0) {
+    console.log(current);
+    break;
+  }
 }
 
 // Using the remainder (%) operator is an easy way to test whether a number is divisible by another number. If it is, the remainder of their division is zero.
@@ -295,33 +290,30 @@ break;
 // end of the loop. This means that the loop will never stop unless the break
 // statement inside is executed.
 
-
 // If you were to remove that break statement or you accidentally write an
 // end condition that always produces true, your program would get stuck
 // in an infinite loop. A program stuck in an infinite loop will never finish
 // running, which is usually a bad thing.
 
-
 // The continue keyword is similar to break in that it influences the
 // progress of a loop. When continue is encountered in a loop body,
 // control jumps out of the body and continues with the loop’s next iteration.
 
-
 // Switch Operator
 
-switch (prompt("What is the weather like?")) {
-case "rainy":
-console.log("Remember to bring an umbrella.");
-break;
-case "sunny":
-console.log("Dress lightly.");
-case "cloudy":
-console.log("Go outside.");
-break;
-default:
-console.log("Unknown weather type!");
-break;
-}
+// switch (prompt("What is the weather like?")) {
+//   case "rainy":
+//     console.log("Remember to bring an umbrella.");
+//     break;
+//   case "sunny":
+//     console.log("Dress lightly.");
+//   case "cloudy":
+//     console.log("Go outside.");
+//     break;
+//   default:
+//     console.log("Unknown weather type!");
+//     break;
+// }
 
 // Capitalization
 
@@ -330,11 +322,13 @@ break;
 // pretty much your choices for writing a binding name with several words in
 // it:
 
-fuzzylittleturtle
-fuzzy_little_turtle
-FuzzyLittleTurtle
-fuzzyLittleTurtle
 
+
+// Naming Convention in JS
+// fuzzylittleturtle;
+// fuzzy_little_turtle;
+// FuzzyLittleTurtle;
+// fuzzyLittleTurtle;
 
 // Comments
 
@@ -342,6 +336,68 @@ fuzzyLittleTurtle
 // ignored by the computer. JavaScript has two ways of writing comments. To
 // write a single-line comment, you can use two slash characters (//) and
 // then the comment text after it:
+
+
+// Quote
+/*
+“People think that computer science is the art of geniuses but the actual reality is the opposite,
+just many people doing things that build on each other, like a wall of mini stones.”
+—Donald Knuth
+*/
+
+// Functions
+
+/*
+
+Functions are one of the most central tools in JavaScript programming. The
+concept of wrapping a piece of program in a value has many uses. It gives
+us a way to structure larger programs, to reduce repetition, to associate
+names with subprograms, and to isolate these subprograms from each other.
+
+*/
+
+
+// Defining a Function
+
+/*
+A function definition is a regular binding where the value of the binding is a
+function.
+*/
+
+// For example, this code defines cube to refer to a function that produces the cube of a given number:
+
+function cube (x) {
+  return x * x * x;
+}
+
+console.log(cube(3));
+
+/*
+A function is created with an expression that starts with the keyword
+function. Functions have a set of parameters (in this case, only x) and
+a body, which contains the statements that are to be executed when the
+function is called. The body of a function created this way must always be
+wrapped in braces, even when it consists of only a single statement.
+*/
+
+// Note: A return keyword without an expression after it will cause the function to return undefined. 
+
+
+/*
+
+Parameters to a function behave like regular bindings, but their initial
+values are given by the caller of the function, not the code in the function
+itself.
+
+*/
+
+// Stopped at 59/564
+
+// Bindings and Scopes
+
+
+
+
 
 
 
