@@ -192,21 +192,21 @@ console.log(min);
 
 // Control Flow
 
-let theNumber = Number(prompt("Pick a number"));
-if (!Number.isNaN(theNumber)) {
-  console.log("Your number is the square root of " + theNumber * theNumber);
-} else {
-  console.log("Hey. Why didn't you give me a number?");
-}
+// let theNumber = Number(prompt("Pick a number"));
+// if (!Number.isNaN(theNumber)) {
+//   console.log("Your number is the square root of " + theNumber * theNumber);
+// } else {
+//   console.log("Hey. Why didn't you give me a number?");
+// }
 
-let num = Number(prompt("Pick a number"));
-if (num < 10) {
-  console.log("Small");
-} else if (num < 100) {
-  console.log("Medium");
-} else {
-  console.log("Large");
-}
+// let num = Number(prompt("Pick a number"));
+// if (num < 10) {
+//   console.log("Small");
+// } else if (num < 100) {
+//   console.log("Medium");
+// } else {
+//   console.log("Large");
+// }
 
 // While and Do Loops
 // A statement starting with the keyword while creates a loop. The word
@@ -236,12 +236,112 @@ console.log(result);
 
 
 // Tell ChatGPT to explain this step by step
-let yourName;
-do {
-  yourName = prompt("Who are you?");
-} while (!yourName);
-console.log("Hello " + yourName);
+// let yourName;
+// do {
+//   yourName = prompt("Who are you?");
+// } while (!yourName);
+// console.log("Hello " + yourName);
 
 
 // For Loops
+
+for (let number = 0; number <= 12; number += 2) {
+  console.log(number);
+}
+// This code create a for loop; which start by declaring and initialising a variable followed by a condition that needs to be true then
+// the variable will be increased by 2 only if the condition is true, the condition being that number (the declared variable) must be 
+// less than or equal to 12
+
+// Exercise
+// Generate a list of odd number between 1 to 20
+for (let odd = 1; odd <= 20; odd += 2) {
+  console.log(odd);
+}
+
+
+// Generating set of even number between 2 to 30
+for (let even = 2; even <= 30; even += 2) {
+  console.log(even)
+}
+
+for (let oddNo = 1; oddNo <= 30; oddNo += 2) {
+  console.log(oddNo);
+}
+
+
+// Using for Loop for to get the result of 2 raised to the power of 10
+// Tell ChatGPT to explain what this code does step by step
+let resultExponent = 1;
+for (let counter = 0; counter < 10; counter++) {
+resultExponent *= 2;
+}
+console.log(resultExponent);
+
+
+// Breaking Out of a Loop
+// Having the looping condition produce false is not the only way a loop can finish. The break statement has the effect of immediately jumping out of the enclosing loop.
+
+// The code below; finds the first number that is both greater than or equal to 20 and divisible by 7:
+for (let current = 20; ; current = current + 1) {
+if (current % 7 == 0) {
+console.log(current);
+break;
+}
+}
+
+// Using the remainder (%) operator is an easy way to test whether a number is divisible by another number. If it is, the remainder of their division is zero.
+
+// The for construct in the example does not have a part that checks for the
+// end of the loop. This means that the loop will never stop unless the break
+// statement inside is executed.
+
+
+// If you were to remove that break statement or you accidentally write an
+// end condition that always produces true, your program would get stuck
+// in an infinite loop. A program stuck in an infinite loop will never finish
+// running, which is usually a bad thing.
+
+
+// The continue keyword is similar to break in that it influences the
+// progress of a loop. When continue is encountered in a loop body,
+// control jumps out of the body and continues with the loop’s next iteration.
+
+
+// Switch Operator
+
+switch (prompt("What is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break;
+default:
+console.log("Unknown weather type!");
+break;
+}
+
+// Capitalization
+
+// Binding names may not contain spaces, yet it is often helpful to use
+// multiple words to clearly describe what the binding represents. These are
+// pretty much your choices for writing a binding name with several words in
+// it:
+
+fuzzylittleturtle
+fuzzy_little_turtle
+FuzzyLittleTurtle
+fuzzyLittleTurtle
+
+
+// Comments
+
+// A comment is a piece of text that is part of a program but is completely
+// ignored by the computer. JavaScript has two ways of writing comments. To
+// write a single-line comment, you can use two slash characters (//) and
+// then the comment text after it:
+
+
 
