@@ -322,8 +322,6 @@ for (let current = 20; ; current = current + 1) {
 // pretty much your choices for writing a binding name with several words in
 // it:
 
-
-
 // Naming Convention in JS
 // fuzzylittleturtle;
 // fuzzy_little_turtle;
@@ -336,7 +334,6 @@ for (let current = 20; ; current = current + 1) {
 // ignored by the computer. JavaScript has two ways of writing comments. To
 // write a single-line comment, you can use two slash characters (//) and
 // then the comment text after it:
-
 
 // Quote
 /*
@@ -356,7 +353,6 @@ names with subprograms, and to isolate these subprograms from each other.
 
 */
 
-
 // Defining a Function
 
 /*
@@ -366,7 +362,7 @@ function.
 
 // For example, this code defines cube to refer to a function that produces the cube of a given number:
 
-function cube (x) {
+function cube(x) {
   return x * x * x;
 }
 
@@ -380,8 +376,7 @@ function is called. The body of a function created this way must always be
 wrapped in braces, even when it consists of only a single statement.
 */
 
-// Note: A return keyword without an expression after it will cause the function to return undefined. 
-
+// Note: A return keyword without an expression after it will cause the function to return undefined.
 
 /*
 
@@ -395,9 +390,83 @@ itself.
 
 // Bindings and Scopes
 
+// Variables or bindings that are defined outside of any function, block, or module, the scope is the whole program—you can refer to
+// such bindings wherever you want. These are called global.
+
+// Variables or bindings created for function parameters or declared inside a function can
+// be referenced only in that function, so they are known as local bindings.
+
+// Bindings declared with let and const are in fact local to the block in
+// which they are declared, so if you create one of those inside of a loop, the
+// code before and after the loop cannot “see” it.
+
+let x = 10; // global
+if (true) {
+  let y = 20; // local to block
+  var z = 30; // also global
+}
+
+//  For example, when the code inside the halve function refers to n, it is seeing its own n, not the global n.
+
+const halve = function (n) {
+  return n / 2;
+};
+let n = 10;
+console.log(halve(100));
+// → 50
+console.log(n);
+// → 10
+
+// Nested Scope
+
+/*
+
+The set of bindings visible inside a block is determined by the place of that
+block in the program text. Each local scope can also see all the local scopes
+that contain it, and all scopes can see the global scope. This approach to
+binding visibility is called lexical scoping.
+
+
+*/
+
+// Functions as Values
+
+/*
+A function binding usually simply acts as a name for a specific piece of the
+program. Such a binding is defined once and never changed. This makes it
+easy to confuse the function and its name.
+*/
+
+let safeMode = true;
+let launchMissiles = function () {
+  missileSystem.launch("now");
+};
+if (safeMode) {
+  launchMissiles = function () {
+    /* do nothing */
+  };
+}
+
+// Delcaration Notation
+
+// There is a slightly shorter way to create a function binding. When the function keyword is used at the start of a statement, it works differently:
+
+function square(x) {
+return x * x;
+}
+
+console.log(square(23));
 
 
 
+/*
+The preceding code works, even though the function is defined below the
+code that uses it. Function declarations are not part of the regular top-tobottom flow of control. They are conceptually moved to the top of their
+scope and can be used by all the code in that scope.
+*/
+console.log("The future says:", future());
+function future() {
+return "You'll never have flying cars";
+}
 
-
-
+// Arrow Functions

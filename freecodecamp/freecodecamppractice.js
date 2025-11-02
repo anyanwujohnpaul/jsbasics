@@ -453,6 +453,7 @@ let wordTest4 = "Test";
 console.log(wordTest4.repeat(0));  // Output: "" - This returns an empty string
 
 
+
 // Working with Numbers and Arithmetic Operators
 // Numbers
 // Checking Types
