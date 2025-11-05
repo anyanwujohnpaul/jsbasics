@@ -471,12 +471,12 @@ return "You'll never have flying cars";
 
 // Arrow Functions
 
-const roundTo = (n, step) => {
-let remainder = n % step;
-return n - remainder + (remainder < step / 2 ? 0 : step);
+const roundToOne = (n_One, stepOne) => {
+let remainderOne = n_One % stepOne;
+return n_One - remainderOne + (remainderOne < stepOne / 2 ? 0 : stepOne);
 };
 
-console.log(roundTo(45, 2));
+console.log(roundToOne(45, 2));
 
 
 // When an arrow function has no parameter
@@ -485,3 +485,108 @@ const horn = () => {
 console.log("Toot");
 };
 horn();
+
+
+
+
+
+// Call Stack
+function greet(who) {
+console.log("Hello " + who);
+}
+greet("Harry");
+console.log("Bye");
+
+
+
+//Optional Arguments
+// The following code is allowed and executes without any problem:
+
+function square(x) { return x * x; }
+console.log(square(4, true, "hedgehog"));
+
+// In the code above x is referred to as the parameter and 4 is referred to as the arguments and since the function has only one
+// parameter then it going to work only for the first argument
+
+// Note: JavaScript is extremely broad-minded about the number of arguments you can pass to a function. If you pass too many, the extra ones are ignored. If
+// you pass too few, the missing parameters are assigned the value
+// undefined.
+
+function minus(a, b) {
+if (b === undefined) return -a;
+else return a - b;
+}
+
+console.log(minus(10));
+// → -10
+console.log(minus(10, 5));
+// → 5
+
+
+
+function roundTo(n, step = 1) {
+let remainder = n % step;
+return n - remainder + (remainder < step / 2 ? 0 : step);
+};
+console.log(roundTo(4.5));
+// → 5
+console.log(roundTo(4.5, 2));
+// → 4
+
+remainder = 0;
+n = 4.5;
+step = 0;
+
+
+// Closure: A function that references bindings from local scopes around it
+
+function wrapValue(n) {
+let local = n;
+return () => local;
+}
+
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2
+
+
+function multiplier(factor) {
+return number => number * factor;
+}
+let twice = multiplier(2);
+
+console.log(twice(5));
+
+
+/*
+Note: Thinking about programs like this takes some practice. A good mental
+model is to think of function values as containing both the code in their
+body and the environment in which they are created. When called, the
+function body sees the environment in which it was created, not the
+environment in which it is called. 
+*/
+
+// Recursion
+
+// A function that calls itself is called recursive.
+
+// Recursion allows some functions to be written in a different style.
+
+function power(base, exponent) {
+if (exponent == 0) {
+return 1;
+} else {
+return base * power(base, exponent - 1);
+}
+}
+
+console.log(power(2, 3));
+// → 8
+
+// Stopped at Recursion
+
+
