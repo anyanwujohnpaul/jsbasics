@@ -470,3 +470,18 @@ return "You'll never have flying cars";
 }
 
 // Arrow Functions
+
+const roundTo = (n, step) => {
+let remainder = n % step;
+return n - remainder + (remainder < step / 2 ? 0 : step);
+};
+
+console.log(roundTo(45, 2));
+
+
+// When an arrow function has no parameter
+
+const horn = () => {
+console.log("Toot");
+};
+horn();
